@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Идеальный layout</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+      </header>
+      <aside>MENU</aside>
+      <main>CONTENT</main>
+      <footer>FOOTER</footer>
+    </div>
+    <noscript>
+      <strong>We're sorry but project-vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+  </body>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 50px 350px 50px;
+      color: #fff;
+    }
+    header {
+      grid-column: span 12;
+      display: flex;
+      background-color: #606266;
+    }
+    aside {
+      grid-column: span 2;
+      background-color: #909399;
+    }
+    main {
+      grid-column: span 10;
+      background-color: #C0C4CC;
+    }
+    footer {
+      grid-column: span 12;
+      background-color: #606266;
+    }
+    header > div:nth-child(3) {
+      margin-left: auto;
+    }
+  </style>
+</html>
